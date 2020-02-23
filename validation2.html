@@ -1,0 +1,138 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Gravitas+One|Secular+One|Spicy+Rice&display=swap" rel="stylesheet"> 
+<script>
+
+function r()
+{
+var name = document.forms["RegForm"]["Name"];
+var email = document.forms["RegForm"]["EMail"];
+var phone = document.forms["RegForm"]["Telephone"];
+var what = document.forms["RegForm"]["Subject"];
+var password = document.forms["RegForm"]["Password"];
+var address = document.forms["RegForm"]["Address"];
+
+
+if (name.value == "")
+{
+window.alert("Please enter your name.");
+name.focus();
+return false;
+}
+
+if (address.value == "")
+{
+window.alert("Please enter your address.");
+address.focus();
+return false;
+}
+
+if (email.value == "")
+{
+window.alert("Please enter a valid e-mail address.");
+email.focus();
+return false;
+}
+
+if (phone.value == "")
+{
+window.alert("Please enter your telephone number.");
+phone.focus();
+return false;
+}
+
+if ( password.value == "")
+{
+window.alert("Please enter your password");
+password.focus();
+return false;
+}
+
+
+if (what.selectedIndex < 1)
+{
+alert("Please enter your course.");
+what.focus();
+return false;
+}
+
+return true;
+}</script>
+
+<style>
+div {
+box-sizing: border-box;
+width: 45%;
+float: initial;
+align-content: center;
+align-items: center;
+}
+
+body{
+	background-image: url("https://www.mediclinic.ae/renditions/mc-me-corporate/images/content/main-page/3x2/588/1547117164271/Electrophysiology.jpg");
+	background-size: cover;
+
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+
+}
+.inner{
+	background-color: rgba(255,255,255,0.72);
+	border-radius: 10px;
+}
+
+.title{
+	background-color: rgba(6,234,41,0,38)
+	color: #ffffff;
+
+}
+
+h1{
+
+	font-size: 2em;
+	font-family: 'Secular One', sans-serif;
+
+}
+form {
+margin-left: 90px;
+width: 600px;
+}</style></head>
+
+<body>
+	<div class="container">
+		<div class="inner">
+	
+<h1 style="color: blue; text-align: center;"> REGISTRATION FORM </h1>			
+<form name="RegForm" onsubmit="return r()">
+	
+
+<p>Name: <input type="text" size=65 name="Name"> </p><br>
+<p> Address: <input type="text" size=65 name="Address"> </p><br>
+<p>E-mail Address: <input type="text" size=65 name="EMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter an email address"> </p><br>
+<p>Password: <input type="text" size=65 name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"> </p><br>
+<p>Telephone: <input type="text" size=65 name="Telephone" pattern=".{8,}" title="Please enter phone number"> </p><br>
+
+<p>SELECT YOUR COURSE
+<select type="text" value="" name="Subject">
+<option>BTECH</option>
+<option>BBA</option>
+<option>BCA</option>
+<option>B.COM</option>
+</select></p><br><br>
+<p>Comments: <textarea cols="55" name="Comment"> </textarea></p>
+<p><input type="submit" value="send" name="Submit">
+<input type="reset" value="Reset" name="Reset">
+</p>
+</div>
+</div>
+</form>
+</div>
+</body>
+</html> 
